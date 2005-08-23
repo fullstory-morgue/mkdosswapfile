@@ -1,0 +1,3 @@
+*.desktop usr/share/applnk/Kanotix/Config/
+mkdosswapfile usr/sbin/
+icons usr/share/

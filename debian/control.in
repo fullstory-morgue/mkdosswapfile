@@ -1,0 +1,15 @@
+Source: mkdosswapfile-kanotix
+Section: utils
+Priority: optional
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Build-Depends-Indep: @cdbs@
+Standards-Version: 3.6.2
+
+Package: mkdosswapfile-kanotix
+Architecture: all
+Provides: mkdosswapfile-knoppix
+Conflicts: mkdosswapfile-knoppix
+Depends: kanotix-su, dialog
+Suggests: xdialog
+Description: generate swap files
+ Shell GUI for generation of swap files on DOS partitions.

@@ -1,0 +1,7 @@
+[Desktop Entry]
+Exec=kanotix-su /usr/sbin/mkdosswapfile
+Name[de]=SWAP-Datei Konfiguration
+Name[es]=Configuración del archivo SWAP
+Name=SWAP file configuration
+Icon=mkdosswapfile
+Type=Application
