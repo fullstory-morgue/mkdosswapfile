@@ -1,3 +1,9 @@
+mkdosswapfile-kanotix (0.5.15) unstable; urgency=low
+
+  * fix icon location.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 24 Aug 2005 13:51:27 +0200
+
 mkdosswapfile-kanotix (0.5.14) unstable; urgency=low
 
   * overhaul packaging.
