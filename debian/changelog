@@ -1,3 +1,9 @@
+mkdosswapfile-kanotix (0.5.16) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 24 Aug 2005 13:54:30 +0200
+
 mkdosswapfile-kanotix (0.5.15) unstable; urgency=low
 
   * fix icon location.
