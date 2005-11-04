@@ -1,8 +1,8 @@
-mkdosswapfile-kanotix (0.5.16) UNRELEASED; urgency=low
+mkdosswapfile-kanotix (0.5.16) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch from /mnt/ to /media/.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 24 Aug 2005 13:54:30 +0200
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Fri,  4 Nov 2005 18:53:23 +0100
 
 mkdosswapfile-kanotix (0.5.15) unstable; urgency=low
 

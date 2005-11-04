@@ -48,7 +48,7 @@ then
 foundp="$(LANG=C LC_ALL=C fdisk -l $partitions 2>/dev/null)"
 for p in `echo "$foundp" | awk '/^\/dev\//{if(/FAT/){print $1}}'`
 do
-d="/mnt/${p##*/}"
+d="/media/${p##*/}"
 if mount -o ro -t vfat $p $d 2>/dev/null; then
 [ ! -f $d/kanotix.swp ] && DOSPARTITIONS="$DOSPARTITIONS $p"
 umount $d
@@ -85,7 +85,7 @@ SUCCESS="Swapfile 'kanotix.swp' on $p successfully created."
 ;;
 esac
 
-d="/mnt/${p##*/}"
+d="/media/${p##*/}"
 f="$d/kanotix.swp"
 if mount -o umask=000,rw -t vfat $p $d; then
 if $DIALOG --yesno "$MESSAGE1" 11 62; then
