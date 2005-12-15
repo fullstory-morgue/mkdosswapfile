@@ -1,10 +1,12 @@
 mkdosswapfile-kanotix (0.5.17) unstable; urgency=low
 
-  * synch with mkdosswapfile-knoppix 0.5-12, omit ntfs support related 
+  * synch with mkdosswapfile-knoppix 0.5-12, omit ntfs support related
     changes, changed by Klaus Knopper <knopper@knopper.net>:
     - Corrected bug when searching df -m output.
+  * remove virtual knoppix packages.
+  * bump compat level to 5.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 13 Dec 2005 11:24:04 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 15 Dec 2005 11:22:17 +0100
 
 mkdosswapfile-kanotix (0.5.16) unstable; urgency=low
 

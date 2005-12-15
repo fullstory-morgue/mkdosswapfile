@@ -7,8 +7,6 @@ Standards-Version: 3.6.2
 
 Package: mkdosswapfile-kanotix
 Architecture: all
-Provides: mkdosswapfile-knoppix
-Conflicts: mkdosswapfile-knoppix
 Depends: kanotix-su, dialog
 Suggests: xdialog
 Description: generate swap files
