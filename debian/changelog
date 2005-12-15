@@ -1,3 +1,9 @@
+mkdosswapfile-kanotix (0.5.18) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 15 Dec 2005 11:24:03 +0100
+
 mkdosswapfile-kanotix (0.5.17) unstable; urgency=low
 
   * synch with mkdosswapfile-knoppix 0.5-12, omit ntfs support related
