@@ -89,7 +89,7 @@ d="/media/${p##*/}"
 f="$d/kanotix.swp"
 if mount -o umask=000,rw -t vfat $p $d; then
 if $DIALOG --yesno "$MESSAGE1" 11 62; then
-AVAIL=$(df -m $d | awk '/^\/dev\//{print $4}')
+AVAIL="$(df -m $DIRECTORY | tail -1 | awk '{print $4}')"
 if [ "$AVAIL" -lt 60 ]; then
 $DIALOG --msgbox "$ERROR1" 10 45
 umount $d
