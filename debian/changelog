@@ -1,8 +1,9 @@
-mkdosswapfile-kanotix (0.5.18) UNRELEASED; urgency=low
+mkdosswapfile-kanotix (0.5.18) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * remove cdbs auto-update feature.
+  * bump compat level to 5.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu, 15 Dec 2005 11:24:03 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 11 Mar 2006 23:50:21 +0100
 
 mkdosswapfile-kanotix (0.5.17) unstable; urgency=low
 
