@@ -7,7 +7,7 @@ Standards-Version: 3.6.2
 
 Package: mkdosswapfile-kanotix
 Architecture: all
-Depends: kanotix-su, dialog
+Depends: kanotix-su, dialog, initscripts-kanotix-live
 Suggests: xdialog
 Description: generate swap files
  Shell GUI for generation of swap files on DOS partitions.

@@ -1,8 +1,8 @@
-mkdosswapfile-kanotix (0.5.19) UNRELEASED; urgency=low
+mkdosswapfile-kanotix (0.5.19) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * add missing dependency on initscripts-kanotix-live.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sat, 11 Mar 2006 23:51:43 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 13 Mar 2006 10:58:19 +0100
 
 mkdosswapfile-kanotix (0.5.18) unstable; urgency=low
 
