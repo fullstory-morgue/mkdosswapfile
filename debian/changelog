@@ -1,8 +1,9 @@
-mkdosswapfile-kanotix (0.5.20) UNRELEASED; urgency=low
+mkdosswapfile-kanotix (0.5.20) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * switch to utf-8.
+  * fix lintian errors.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Mon, 13 Mar 2006 10:59:22 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 13:40:18 +0100
 
 mkdosswapfile-kanotix (0.5.19) unstable; urgency=low
 
