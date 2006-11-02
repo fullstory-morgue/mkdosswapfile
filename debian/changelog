@@ -1,3 +1,9 @@
+mkdosswapfile-kanotix (0.5.21) UNRELEASED; urgency=low
+
+  * NOT RELEASED YET
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 13:42:23 +0100
+
 mkdosswapfile-kanotix (0.5.20) unstable; urgency=low
 
   * switch to utf-8.
