@@ -1,8 +1,12 @@
-mkdosswapfile-kanotix (0.5.21) UNRELEASED; urgency=low
+mkdosswapfile-kanotix (0.5.21) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * fix bogus /etc/sysconfig/ dependency.
+  * fix i18n handling.
+  * re- indent.
+  * use proper escaping/ quoting.
+  * fix code flow.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  2 Nov 2006 13:42:23 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  9 Nov 2006 22:40:32 +0100
 
 mkdosswapfile-kanotix (0.5.20) unstable; urgency=low
 
