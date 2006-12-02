@@ -1,5 +1,5 @@
 #!/bin/bash
-# mkdosswapfile - create KANOTIX swapfile on a existing DOS partition
+# mkdosswapfile - create Sidux swapfile on a existing DOS partition
 # (C) Klaus Knopper Mar 2001
 # (C) 2005-2006 Stefan Lippers-Hollmann <s.l-h@gmx.de>
 
@@ -10,6 +10,12 @@ XDIALOG_HIGH_DIALOG_COMPAT=1
 export XDIALOG_HIGH_DIALOG_COMPAT
 
 TMP="$(mktemp -p /tmp/ mkdosswapfile-XXXXXXXXXX)"
+
+# override tool behaviour through distro-defaults
+FLL_DISTRO_NAME="Sidux"
+FLL_LIVE_USER="sidux"
+[ -r /etc/default/distro ] && . /etc/default/distro
+
 
 bailout() {
 	rm -f "$TMP"
@@ -42,7 +48,7 @@ if [ -f /proc/partitions ]; then
 			for p in `echo "$foundp" | awk '/^\/dev\//{if(/FAT/){print $1}}'`; do
 				d="/media/${p##*/}"
 					if mount -o ro -t vfat "$p" "$"d 2>/dev/null; then
-						[ ! -f $d/kanotix.swp ] && DOSPARTITIONS="$DOSPARTITIONS $p"
+						[ ! -f $d/$FLL_LIVE_USER.swp ] && DOSPARTITIONS="$DOSPARTITIONS $p"
 						umount "$d"
 					fi
 			done
@@ -56,30 +62,30 @@ if [ -n "$DOSPARTITIONS" ]; then
 		# Language-dependent Messages
 		case "$LANG" in
 			de*|at*|ch*)
-				MESSAGE1="Möchten Sie eine SWAP-Datei 'kanotix.swp' für KNOPPIX auf Ihrer bestehenden DOS-Partition $p anlegen? Eine solche SWAP-Datei ermöglicht es Ihnen, trotz geringem Hauptspeicher Programmpakete wie KDE zu benutzen. Sie können diese Datei nach Beendigung Ihrer KNOPPIX-Session gefahrlos wieder löschen."
+				MESSAGE1="Möchten Sie eine SWAP-Datei '$FLL_LIVE_USER.swp' für $FLL_DISTRO_NAME auf Ihrer bestehenden DOS-Partition $p anlegen? Eine solche SWAP-Datei ermöglicht es Ihnen, trotz geringem Hauptspeicher Programmpakete wie KDE zu benutzen. Sie können diese Datei nach Beendigung Ihrer $FLL_DISTRO_NAME-Session gefahrlos wieder löschen."
 				MESSAGE2="Bitte geben Sie an, wieviel MB Sie als SWAP verwenden wollen. Empfohlen: 60 - 128. Frei: "
-				MESSAGE3="Erzeuge swapfile 'kanotix.swp' auf $p..."
+				MESSAGE3="Erzeuge swapfile '$FLL_LIVE_USER.swp' auf $p..."
 				ERROR1="Leider ist nicht genug Platz auf dieser Partition ($p), es sollten mindestens 60 MB frei sein."
-				SUCCESS="Das Einrichten des Swapfiles 'kanotix.swp' auf $p war erfolgreich."
+				SUCCESS="Das Einrichten des Swapfiles '$FLL_LIVE_USER.swp' auf $p war erfolgreich."
 				;;
 			es*)
-				MESSAGE1="¿Quiere crear un fichero de memoria virtual (swap) 'kanotix.swp' en su partición DOS existente $p? Un fichero swap le permite utilizar grandes aplicaciones como KDE incluso si su ordenador tiene poca memoria. Puede borrar tranquilamente el fichero swap una vez haya finalizado su sesión con KNOPPIX."
+				MESSAGE1="¿Quiere crear un fichero de memoria virtual (swap) '$FLL_LIVE_USER.swp' en su partición DOS existente $p? Un fichero swap le permite utilizar grandes aplicaciones como KDE incluso si su ordenador tiene poca memoria. Puede borrar tranquilamente el fichero swap una vez haya finalizado su sesión con $FLL_DISTRO_NAME."
 				MESSAGE2="Por favor, especifique la cantidad de espacio en disco que quiere utilizar como SWAP. Recomendado: 60 - 128. Libre: "
-				MESSAGE3="Creando archivo de memoria virtual 'kanotix.swp' en $p..."
+				MESSAGE3="Creando archivo de memoria virtual '$FLL_LIVE_USER.swp' en $p..."
 				ERROR1="Lo siento, no hay suficiente espacio libre en $p. Son necesarios al menos 60 MB."
-				SUCCESS="Archivo swap 'kanotix.swp' en $p creado satisfactoriamente."
+				SUCCESS="Archivo swap '$FLL_LIVE_USER.swp' en $p creado satisfactoriamente."
 				;;
 			*)
-				MESSAGE1="Do you want to create a swapfile 'kanotix.swp' on your existing DOS partition $p? A swapfile allows you to use huge application packages like KDE even if your computer is low on memory. You can safely delete the swapfile after finishing your KNOPPIX session."
+				MESSAGE1="Do you want to create a swapfile '$FLL_LIVE_USER.swp' on your existing DOS partition $p? A swapfile allows you to use huge application packages like KDE even if your computer is low on memory. You can safely delete the swapfile after finishing your $FLL_DISTRO_NAME session."
 				MESSAGE2="Please specify the amount of diskspace that you want to use as SWAP. Recommended: 60 - 128. Free: "
-				MESSAGE3="Creating swapfile 'kanotix.swp' on $p..."
+				MESSAGE3="Creating swapfile '$FLL_LIVE_USER.swp' on $p..."
 				ERROR1="Sorry, not enough free space on $p. At least 60 MB required."
-				SUCCESS="Swapfile 'kanotix.swp' on $p successfully created."
+				SUCCESS="Swapfile '$FLL_LIVE_USER.swp' on $p successfully created."
 				;;
 		esac
 
 		d="/media/${p##*/}"
-		f="$d/kanotix.swp"
+		f="$d/$FLL_LIVE_USER.swp"
 		if mount -o umask=000,rw -t vfat $p $d; then
 			if $DIALOG --yesno "$MESSAGE1" 11 62; then
 				AVAIL="$(df -m $DIRECTORY | tail -1 | awk '{print $4}')"
