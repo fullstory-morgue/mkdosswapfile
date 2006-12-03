@@ -1,10 +1,12 @@
-mkdosswapfile (0.5.22) UNRELEASED; urgency=low
+mkdosswapfile (0.5.22) unstable; urgency=low
 
-  * NOT RELEASED YET
-
+  [ Joaquim Boura ]
   * Initial sidux version
 
- -- Joaquim Boura <x-un-i@sidux.com>  Sat,  2 Dec 2006 12:28:14 +0100
+  [ Stefan Lippers-Hollmann ]
+  * tweak debian/control.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun,  3 Dec 2006 02:45:57 +0100
 
 mkdosswapfile-kanotix (0.5.21) unstable; urgency=low
 
