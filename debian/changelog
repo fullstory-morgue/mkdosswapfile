@@ -1,6 +1,4 @@
-mkdosswapfile (0.5.23) UNRELEASED; urgency=low
-
-  * NOT RELEASED YET
+mkdosswapfile (0.5.23) unstable; urgency=low
 
   * fixed mispelling
 
