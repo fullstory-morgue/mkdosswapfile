@@ -8,7 +8,6 @@ Standards-Version: 3.7.2
 Package: mkdosswapfile
 Architecture: all
 Depends: su-me, dialog, initscripts-sidux-live
-Conflicts: mkdosswapfile-kanotix
 Suggests: xdialog
 Description: generate swap files
  Shell GUI for generation of swap files on DOS partitions.

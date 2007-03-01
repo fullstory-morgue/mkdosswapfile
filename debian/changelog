@@ -1,8 +1,9 @@
-mkdosswapfile (0.5.25) UNRELEASED; urgency=low
+mkdosswapfile (0.5.25) unstable; urgency=low
 
-  * NOT RELEASED YET
+  * mkdosswapfile-kanotix was never part of sidux or debian, don't conflict
+    with it.
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Wed, 13 Dec 2006 01:30:05 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  1 Mar 2007 17:31:15 +0100
 
 mkdosswapfile (0.5.24) unstable; urgency=low
 
