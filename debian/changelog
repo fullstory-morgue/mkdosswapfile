@@ -1,8 +1,9 @@
-mkdosswapfile (0.5.26) UNRELEASED; urgency=low
+mkdosswapfile (0.5.26) ORPHANED; urgency=low
 
   * NOT RELEASED YET
+  * ORPHAN PACKAGE
 
- -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Thu,  1 Mar 2007 17:33:20 +0100
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Sun, 11 Mar 2007 23:52:07 +0100
 
 mkdosswapfile (0.5.25) unstable; urgency=low
 
